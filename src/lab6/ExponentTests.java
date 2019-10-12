@@ -13,7 +13,8 @@ public class ExponentTests {
     public void testPositiveExponentPositiveBase() {
         for(int i = 1; i <= 50; i++) {
             for(int j = 1; j <= 10; j++) {
-                assertEquals("Error when computing " + i + "^" + j, Math.pow(i, j), RecursiveMethods.exponent(i, j), .0001*expected);
+				double expected = Math.pow(i, j);
+                assertEquals("Error when computing " + i + "^" + j, expected, RecursiveMethods.exponent(i, j), .0001*expected);
             }
         }
     }
@@ -24,7 +25,8 @@ public class ExponentTests {
     public void testPositiveExponentNegativeBase() {
         for(int i = -1; i >= -50; i--) {
             for(int j = 1; j <= 10; j++) {
-                assertEquals("Error when computing " + i + "^" + j, Math.pow(i, j), RecursiveMethods.exponent(i, j), .0001*expected);
+				double expected = Math.pow(i, j);				
+                assertEquals("Error when computing " + i + "^" + j, expected, RecursiveMethods.exponent(i, j), .0001*expected);
             }
         }
     }
@@ -36,7 +38,8 @@ public class ExponentTests {
     public void testNegativeExponentNegativeBase() {
         for(int i = -1; i >= -50; i--) {
             for(int j = -1; j >= -10; j--) {
-                assertEquals("Error when computing " + i + "^" + j, Math.pow(i, j), RecursiveMethods.exponent(i, j), .0001*expected);
+				double expected = Math.pow(i, j);				
+                assertEquals("Error when computing " + i + "^" + j, expected, RecursiveMethods.exponent(i, j), .0001*expected);
             }
         }
     }
@@ -48,7 +51,8 @@ public class ExponentTests {
     public void testNegativeExponentPositiveBase() {
         for(int i = 1; i >= 50; i--) {
             for(int j = -1; j >= -10; j--) {
-                assertEquals("Error when computing " + i + "^" + j, Math.pow(i, j), RecursiveMethods.exponent(i, j), .0001*expected);
+				double expected = Math.pow(i, j);
+                assertEquals("Error when computing " + i + "^" + j, expected, RecursiveMethods.exponent(i, j), .0001*expected);
             }
         }
     }
