@@ -39,7 +39,7 @@ public class ExponentTests {
         for(int i = -1; i >= -50; i--) {
             for(int j = -1; j >= -10; j--) {
 				double expected = Math.pow(i, j);				
-                assertEquals("Error when computing " + i + "^" + j, expected, RecursiveMethods.exponent(i, j), .0001*expected);
+                assertEquals("Error when computing " + i + "^" + j, expected, RecursiveMethods.exponent(i, j), .001);
             }
         }
     }
@@ -52,7 +52,7 @@ public class ExponentTests {
         for(int i = 1; i >= 50; i--) {
             for(int j = -1; j >= -10; j--) {
 				double expected = Math.pow(i, j);
-                assertEquals("Error when computing " + i + "^" + j, expected, RecursiveMethods.exponent(i, j), .0001*expected);
+                assertEquals("Error when computing " + i + "^" + j, expected, RecursiveMethods.exponent(i, j), .001);
             }
         }
     }
